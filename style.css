@@ -1,0 +1,98 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+html, body{
+	height: 100%;
+}
+body{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-around;
+	font-family: 'Poppins',Arial,sans-serif;
+	background: #D3D3D3;
+}
+
+
+
+.container{
+	width: 300px;
+	height: 550px;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 2px 5px rgba(0, 0, 0, 0.3);
+	background: #000;
+}
+
+
+
+.container #canvas{
+	width: 100%;
+	height: 500px;
+}
+
+
+
+.bottom-nav{
+	height: 50px;
+	background: #000;
+	display: flex;
+	justify-content: space-between;
+	box-shadow: 0 -1px 3px rgba(255, 255, 255, 0.3);
+}
+.bottom-nav a{
+	height: 100%;
+	width: 50px;
+	text-align: center;
+	line-height: 50px;
+	color: #fff;
+	font-size: 16px;
+	transition: transform 0.3s;
+}
+.bottom-nav a:hover{
+	transform: rotate(5deg);
+}
+.bottom-nav a:nth-child(1){
+	color: #227BE3;
+}
+.bottom-nav a:nth-child(2){
+	color: #328BF6;
+}
+.bottom-nav a:nth-child(3){
+	color: #D93685;
+}
+.bottom-nav a:nth-child(5){
+	color: #FFCC72;
+}
+
+
+
+.msg{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: #fff;
+	font-size: 30px;
+	padding: 10px 0;
+	text-align: center;
+	background: rgba(0, 0, 0, 0.2);
+	animation: move 0.5s linear infinite;
+	display: none;
+}
+@keyframes move{
+	0%{
+		transform: translate(-50%, -50%) rotate(0deg);
+	}
+	25%{
+		transform: translate(-50%, -50%) rotate(10deg);
+	}
+	50%{
+		transform: translate(-50%, -50%) rotate(0);
+	}
+	75%{
+		transform: translate(-50%, -50%) rotate(-10deg);
+	}
+	100%{
+		transform: translate(-50%, -50%) rotate(0deg);
+	}
+}
