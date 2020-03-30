@@ -46,7 +46,7 @@ var i = 0;
 
 var fig = objects[oi].points;
 
-c.strokeStyle = "#" + Math.floor(Math.random()*16777215).toString(16);
+c.strokeStyle = "rgb(" + rand(100, 255) + "," + rand(100, 255) + "," + rand(100, 255) + ")";
 c.lineWidth = "3";
 
 function render(){
@@ -69,7 +69,7 @@ function render(){
 	
 	i++;
 	if(i >= fig.length){
-		msgEl.innerHTML = objects[oi].text;
+		msgEl.innerText = objects[oi].text;
 		msgEl.style.display = "block";
 		return;
 	}
