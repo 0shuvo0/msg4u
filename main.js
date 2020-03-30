@@ -35,7 +35,7 @@ var px = undefined;
 var py = undefined;
 
 var dbkey = "some_stupid_shit";
-
+//localStorage.removeItem(dbkey);
 var oi = localStorage.getItem(dbkey);
 if(!oi){
 	oi = rand(0, objects.length - 1);
@@ -45,6 +45,9 @@ oi = parseInt(oi);
 var i = 0;
 
 var fig = objects[oi].points;
+
+c.strokeStyle = "#" + Math.floor(Math.random()*16777215).toString(16);
+c.lineWidth = "3";
 
 function render(){
 	var x = fig[i].x;
@@ -56,7 +59,6 @@ function render(){
 	}
 	
 	c.beginPath();
-	c.strokeStyle = "#fff";
 	c.moveTo(px, py);
 	c.lineTo(x, y);
 	c.stroke();
